@@ -1,7 +1,7 @@
-name=The Adventures Of Horse
-author=Nanobot567 & Ce3
-description=a free to play animal care game!
-bundleID=com.nano.ce3.ahh
+name=template
+author=author
+description=pd-template
+bundleID=com.nano.template
 version=1.0
-buildNumber=614
+buildNumber=0
 imagePath=SystemAssets
