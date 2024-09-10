@@ -2,7 +2,7 @@
 my playdate project template
 
 ### notes
+- for linux systems
 - requires python (for now)
-- assumes that your playdate sdk path is (user)/Documents/PlaydateSDK/
-  - on linux/mac os assumes that you've put your playdate sdk/bin directory on PATH
-- `build-run.bat`creates a /Games/ folder in your CWD
+- [`just`](https://github.com/casey/just)-based
+- assumes PlaydateSimulator and pdc are in `$PATH`

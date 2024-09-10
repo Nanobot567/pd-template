@@ -1,5 +1,7 @@
 import "CoreLibs/graphics"
 
-function playdate.update()
+import "consts"
+
+function pd.update()
     -- code
 end
