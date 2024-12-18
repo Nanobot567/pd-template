@@ -1,3 +1,6 @@
+# set name of playdate game here
+PDX_NAME := "template"
+
 default: build run
 
 [private]
@@ -28,12 +31,12 @@ incrementBuildNumber:
 build:
     @just incrementBuildNumber
 
-    pdc -q src template
+    pdc -q src {{PDX_NAME}}
 
 run:
-    PlaydateSimulator template.pdx
+    PlaydateSimulator {{PDX_NAME}}.pdx
 
 release:
     just build
-    -rm template.pdx.zip
-    zip -rq template.pdx.zip template.pdx
+    -rm {{PDX_NAME}}.pdx.zip
+    zip -rq {{PDX_NAME}}.pdx.zip {{PDX_NAME}}.pdx
