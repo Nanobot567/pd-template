@@ -1,6 +1,13 @@
 # set name of playdate game here
 PDX_NAME := "template"
 
+# set playdate SDK path (don't forget the '/'!!)
+SDK_PATH := "~/Documents/PlaydateSDK/"
+
+SDK_BIN := SDK_PATH + "bin/"
+SDK_PDC := SDK_BIN + "pdc"
+SDK_SIM := SDK_BIN + "PlaydateSimulator"
+
 default: build run
 
 [private]
@@ -31,10 +38,10 @@ incrementBuildNumber:
 build:
     @just incrementBuildNumber
 
-    pdc -q src {{PDX_NAME}}
+    {{SDK_PDC}} -q src {{PDX_NAME}}
 
 run:
-    PlaydateSimulator {{PDX_NAME}}.pdx
+    {{SDK_SIM}} {{PDX_NAME}}.pdx
 
 release:
     just build
